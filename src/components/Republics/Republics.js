@@ -28,7 +28,7 @@ const Republics = () => {
                 <MyInput placeholder="Search"/>
             </div>
             <div className={classes.row_3}>
-                Breadpiece
+                <small>Countries/</small>
             </div>
         </div>
     );
