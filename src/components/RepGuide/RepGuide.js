@@ -223,7 +223,11 @@ const RepGuide = () => {
     ];
     let dat = {};
     const filterData = () => {
-        dat = data.filter((item) => item.name === window.location.pathname.slice(1))[0];
+        let location =
+            window.location.pathname.indexOf("/", 1) !== -1
+                ? window.location.pathname.slice(1, window.location.pathname.indexOf("/", 1))
+                : window.location.pathname.slice(1);
+        dat = data.filter((item) => item.name === location)[0];
     };
     filterData();
     const { sights, otherServices, uzb, covid } = dat;
