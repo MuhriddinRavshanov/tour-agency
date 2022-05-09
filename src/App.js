@@ -3,6 +3,7 @@ import React from "react";
 import Republics from "./components/Republics/Republics";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RepGuide from "./components/RepGuide/RepGuide";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       </BrowserRouter> */}
       <Republics/>
       <RepGuide/>
+      <Footer/>
     </div>
   );
 };

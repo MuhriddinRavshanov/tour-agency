@@ -1,0 +1,18 @@
+.Footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col_1 {
+  width: 30%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
