@@ -1,17 +1,15 @@
 import React from 'react';
 import classes from './RepSidebar.module.css';
 
-const RepSidebar = () => {
-    let array = ['About Uzbekistan', 'History', 'Cultrue', 'Arts', 'Customs', 'Foreign', 'Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?', 'Customs', 'Foreign', 'Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?'];
-
+const RepSidebar = (props) => {
     return (
         <div className={classes.RepSidebar}>
-            <h3 style={{marginBottom: '40px'}}>Uzbekistan</h3>
+            <h3 style={{marginBottom: '10px'}}>{props.title}</h3>
             <ul style={{listStyle: 'none'}}>
                 { 
-                    array.map(arr => 
+                    props.links.map(f => 
                         <li>
-                            <a href={'#/' + arr}>{arr}</a>
+                            <a href={'#/' + f}>{f}</a>
                         </li>    
                     )
                 }
