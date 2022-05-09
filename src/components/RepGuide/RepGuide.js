@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import classes from "./RepGuide.module.css";
 import RepMap from "./RepMap/RepMap";
 import RepSidebar from "./RepSidebar/RepSidebar";
@@ -234,7 +235,12 @@ const RepGuide = () => {
                 <RepSidebar title="Uzbekistan" links={uzb} />
                 <RepSidebar title="Covid" links={covid} />
             </div>
-            <RepMap />
+            <Routes>
+                <Route path="/" element={<RepMap />} />
+                {sights.map((item, index) => (
+                    <Route path={`${item.toLowerCase()}/*`} key={index} element={<RepMap />} />
+                ))}
+            </Routes>
         </div>
     );
 };
