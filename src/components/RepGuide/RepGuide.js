@@ -1,39 +1,72 @@
-import React from 'react';
-import classes from './RepGuide.module.css';
-import RepMap from './RepMap/RepMap';
-import RepSidebar from './RepSidebar/RepSidebar'
+import React from "react";
+import classes from "./RepGuide.module.css";
+import RepMap from "./RepMap/RepMap";
+import RepSidebar from "./RepSidebar/RepSidebar";
 
 const RepGuide = () => {
-    // let Uzb = ['Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?', 'Customs', 'Foreign', 'Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?'];
-    // let otherServices = ['Flights', 'Guides', 'Trains', 'Transportation', 'Visa'];
-    // let sights = ['Tashkent', 'Samarkand', 'Bukhara', 'Khiva', 'Gijduvan', 'Shakhrisabz', 'Margilan', 'Rishtan', 'Charvak', 'Aral Sea', 'Boysun', 'Chimgan', 'Nurata', 'Termez'];
-    // let covid = ['Covid updates', 'Covid measures', 'Flexible booking', 'Flexible cancellations']
-    let data = [
-        { 
-            name: 'uzbekistan',
-            uzb: ['Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?', 'Customs', 'Foreign', 'Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?'],
-            sights: ['Tashkent', 'Samarkand', 'Bukhara', 'Khiva', 'Gijduvan', 'Shakhrisabz', 'Margilan', 'Rishtan', 'Charvak', 'Aral Sea', 'Boysun', 'Chimgan', 'Nurata', 'Termez'],
-            covid:['Covid updates', 'Covid measures', 'Flexible booking', 'Flexible cancellations'],
-            otherServices:['Flights', 'Guides', 'Trains', 'Transportation', 'Visa']
-        },
-    ]
-    let dat = {}
-    const filterData = () => {
-        dat = data.filter( item => item.name === 'uzbekistan')[0]
-    }
-    filterData()
-    const { sights, otherServices, uzb, covid } = dat
-    return (
-        <div className={classes.RepGuide}>
-            <div className={classes.col_1}>
-                <RepSidebar title="Cities & Sights" links={sights}/>
-                <RepSidebar title="Other services" links={otherServices}/>
-                <RepSidebar title="Uzbekistan" links={uzb}/>
-                <RepSidebar title="Covid" links={uzb}/>
-            </div>
-            <RepMap/>
-        </div>
-    );
+  // let Uzb = ['Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?', 'Customs', 'Foreign', 'Whi visit?', 'Arts', 'Customs', 'Foreign', 'Whi visit?'];
+  // let otherServices = ['Flights', 'Guides', 'Trains', 'Transportation', 'Visa'];
+  // let sights = ['Tashkent', 'Samarkand', 'Bukhara', 'Khiva', 'Gijduvan', 'Shakhrisabz', 'Margilan', 'Rishtan', 'Charvak', 'Aral Sea', 'Boysun', 'Chimgan', 'Nurata', 'Termez'];
+  // let covid = ['Covid updates', 'Covid measures', 'Flexible booking', 'Flexible cancellations']
+  let data = [
+    {
+      name: "uzbekistan",
+      uzb: [
+        "Whi visit?",
+        "Arts",
+        "Customs",
+        "Foreign",
+        "Whi visit?",
+        "Customs",
+        "Foreign",
+        "Whi visit?",
+        "Arts",
+        "Customs",
+        "Foreign",
+        "Whi visit?",
+      ],
+      sights: [
+        "Tashkent",
+        "Samarkand",
+        "Bukhara",
+        "Khiva",
+        "Gijduvan",
+        "Shakhrisabz",
+        "Margilan",
+        "Rishtan",
+        "Charvak",
+        "Aral Sea",
+        "Boysun",
+        "Chimgan",
+        "Nurata",
+        "Termez",
+      ],
+      covid: [
+        "Covid updates",
+        "Covid measures",
+        "Flexible booking",
+        "Flexible cancellations",
+      ],
+      otherServices: ["Flights", "Guides", "Trains", "Transportation", "Visa"],
+    },
+  ];
+  let dat = {};
+  const filterData = () => {
+    dat = data.filter((item) => item.name === "uzbekistan")[0];
+  };
+  filterData();
+  const { sights, otherServices, uzb, covid } = dat;
+  return (
+    <div className={classes.RepGuide}>
+      <div className={classes.col_1}>
+        <RepSidebar title="Cities & Sights" links={sights} />
+        <RepSidebar title="Other services" links={otherServices} />
+        <RepSidebar title="Uzbekistan" links={uzb} />
+        <RepSidebar title="Covid" links={covid} />
+      </div>
+      <RepMap />
+    </div>
+  );
 };
 
 export default RepGuide;

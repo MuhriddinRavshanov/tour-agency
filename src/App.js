@@ -4,19 +4,46 @@ import Republics from "./components/Republics/Republics";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RepGuide from "./components/RepGuide/RepGuide";
 import Footer from "./components/Footer/Footer";
-
 const App = () => {
+  let data = [
+    {
+      path: "",
+      name: "Central Asia",
+    },
+    {
+      path: "uzbekistan",
+      name: "Uzbekistan",
+    },
+    {
+      path: "turkmenistan",
+      name: "Turkmenistan",
+    },
+    {
+      path: "tajikistan",
+      name: "Tajikistan",
+    },
+    {
+      path: "kazakhstan",
+      name: "Kazakhstan",
+    },
+    {
+      path: "kyrgyzstan",
+      name: "Kyrgyzstan",
+    },
+  ];
   return (
     <div>
-      <Header />
-      {/* <BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Republics data={data} />
         <Routes>
-          <Route path="/republics" element={<Republics />} />
+          {data.map((item, index) => (
+            <Route path={`${item.path}`} key={index} element={<RepGuide />} />
+          ))}
         </Routes>
-      </BrowserRouter> */}
-      <Republics/>
-      <RepGuide/>
-      <Footer/>
+      </BrowserRouter>
+      {/* <RepGuide/> */}
+      <Footer />
     </div>
   );
 };
