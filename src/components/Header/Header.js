@@ -1,25 +1,30 @@
 import classes from './Header.module.css'
 import React from 'react';
-import { MyButton } from '../MyUI/MyUI'
+import { FaTwitter, FaFacebook, FaInstagram, FaYoutube, } from 'react-icons/fa';
+import { MyLink } from '../Link/Link';
+import facebook from "../images/facebook.png";
+import instagram from "../images/instagram.png";
+import youtube from "../images/youtube.png";
+import twitter from "../images/twitter.png";
 
 const Header = () => {
     return (
         <div className={classes.Header}>
            <div className={classes.nav}>
                 <div className={classes.col_1}>
-                    <MyButton>About us</MyButton>
-                    <MyButton>Contact us</MyButton>
+                    <MyLink>About us</MyLink>
+                    <MyLink>Contact us</MyLink>
                 </div>
                 <div className={classes.col_2}>
-                    <MyButton>uzb@oasisinternational.travel</MyButton>
-                    <MyButton>FB</MyButton>
-                    <MyButton>IN</MyButton>
-                    <MyButton>YT</MyButton>
-                    <MyButton>TW</MyButton>
+                    <MyLink>uzb@oasisinternational.travel</MyLink>
+                    <MyLink><img src={facebook}/></MyLink>
+                    <MyLink><img src={instagram}/></MyLink>
+                    <MyLink><img src={youtube}/></MyLink>
+                    <MyLink><img src={twitter}/></MyLink>
                 </div>
            </div>
            <div className={classes.logo}>
-               <h1>LOGO</h1>
+               <img src='' alt='Main image'/>
            </div>
         </div>
     );
