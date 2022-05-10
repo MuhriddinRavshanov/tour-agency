@@ -10,17 +10,3 @@
     color: #000;
     text-decoration: none;
 }
-
-.myLink::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    box-shadow: 2px 2px 5px 0px black;
-    transition: width .3s;
-}
-
-.myLink:hover::after {
-    width: 100%;
-}

@@ -24,7 +24,7 @@ const Header = () => {
                 </div>
            </div>
            <div className={classes.logo}>
-               <img src='' alt='Main image'/>
+               <img width={"100%"} src='' alt='Main image'/>
            </div>
         </div>
     );
